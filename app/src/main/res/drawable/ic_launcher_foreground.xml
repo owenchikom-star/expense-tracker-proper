@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group>
+        <!-- Outer Wallet Shadow / Depth Layer -->
+        <path
+            android:fillColor="#042F2E"
+            android:fillAlpha="0.2"
+            android:pathData="M32,38 C32,32.48 36.48,28 42,28 L66,28 C71.52,28 76,32.48 76,38 L76,70 C76,75.52 71.52,80 66,80 L42,80 C36.48,80 32,75.52 32,70 Z" />
+
+        <!-- Main Wallet Body (Emerald Green) -->
+        <path
+            android:fillColor="#059669"
+            android:pathData="M32,36 C32,30.48 36.48,26 42,26 L66,26 C71.52,26 76,30.48 76,36 L76,68 C76,73.52 71.52,78 66,78 L42,78 C36.48,78 32,73.52 32,68 Z" />
+
+        <!-- Wallet Top Highlight -->
+        <path
+            android:fillColor="#10B981"
+            android:pathData="M32,36 C32,30.48 36.48,26 42,26 L66,26 C71.52,26 76,30.48 76,36 L76,44 L32,44 Z" />
+
+        <!-- Wallet Flap -->
+        <path
+            android:fillColor="#047857"
+            android:pathData="M54,46 L79,46 C80.66,46 82,47.34 82,49 L82,57 C82,58.66 80.66,60 79,60 L54,60 Z" />
+
+        <!-- Gold Clasp Button -->
+        <path
+            android:fillColor="#F59E0B"
+            android:pathData="M75,53 A3,3 0 1,1 69,53 A3,3 0 1,1 75,53" />
+
+        <!-- White Trend / Growth Line -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M38,64 L46,55 L52,59 L62,48" />
+
+        <!-- Currency Dollar Icon Accent -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M53.1,30 h1.8 v10 h-1.8 z" />
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="1.4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="#00000000"
+            android:pathData="M55,32 C55,31 54,30.2 53,30.2 C52,30.2 51,31 51,32 C51,33.5 55,34 55,35.5 C55,36.5 54,37.2 53,37.2 C52,37.2 51,36.5 51,35.5" />
+    </group>
+</vector>

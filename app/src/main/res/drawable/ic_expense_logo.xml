@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background Rounded Square (Dark Slate) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M30,0 L170,0 C186,0 200,14 200,30 L200,170 C200,186 186,200 170,200 L30,200 C14,200 0,186 0,170 L0,30 C0,14 14,0 30,0 Z" />
+
+    <!-- Scale the wallet icon up for this logo -->
+    <group
+        android:translateX="46"
+        android:translateY="46"
+        android:scaleX="1.6"
+        android:scaleY="1.6">
+
+        <!-- Main Wallet Container -->
+        <path
+            android:fillColor="#6366F1"
+            android:pathData="M8,18 C8,13.58 11.58,10 16,10 L52,10 C56.42,10 60,13.58 60,18 L60,50 C60,54.42 56.42,58 52,58 L16,58 C11.58,58 8,54.42 8,50 Z" />
+
+        <!-- Highlight -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:fillAlpha="0.2"
+            android:pathData="M16,10 L52,10 C56.42,10 60,13.58 60,18 L60,24 L8,24 L8,18 C8,13.58 11.58,10 16,10 Z" />
+
+        <!-- Flap -->
+        <path
+            android:fillColor="#4F46E5"
+            android:pathData="M44,26 L64,26 C66.21,26 68,27.79 68,30 L68,38 C68,40.21 66.21,42 64,42 L44,42 Z" />
+
+        <!-- Clasp -->
+        <path
+            android:fillColor="#FDE047"
+            android:pathData="M60,34 A2.5,2.5 0 1,1 55,34 A2.5,2.5 0 1,1 60,34" />
+
+        <!-- Trend Line -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M18,48 L28,38 L38,44 L48,32" />
+    </group>
+
+</vector>

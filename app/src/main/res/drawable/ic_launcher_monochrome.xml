@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Monochrome Vector Layer for Android 13+ Material You Dynamic Theming -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M32,36 C32,30.48 36.48,26 42,26 L66,26 C71.52,26 76,30.48 76,36 L76,68 C76,73.52 71.52,78 66,78 L42,78 C36.48,78 32,73.52 32,68 Z" />
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M54,46 L79,46 C80.66,46 82,47.34 82,49 L82,57 C82,58.66 80.66,60 79,60 L54,60 Z" />
+
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M38,64 L46,55 L52,59 L62,48" />
+</vector>
