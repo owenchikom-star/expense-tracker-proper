@@ -1,35 +1,28 @@
 package com.example.expensetracker
 
+import androidx.activity.ComponentActivity
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
 import com.example.expensetracker.theme.ExpenseTrackerTheme
 import com.example.expensetracker.ui.ui.ExpenseApp
-import com.google.firebase.auth.FirebaseAuth
 import org.junit.Rule
 import org.junit.Test
 
 class ExpenseEntryFormUiTest {
 
     @get:Rule
-    val composeTestRule = createComposeRule()
+    val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
-
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun saveButtonIsDisabledWhenFieldsAreEmpty() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }
@@ -43,16 +36,14 @@ class ExpenseEntryFormUiTest {
         composeTestRule.onNodeWithText("Save").assertIsNotEnabled()
     }
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun saveButtonIsEnabledWhenFieldsAreFilled() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }
@@ -71,16 +62,14 @@ class ExpenseEntryFormUiTest {
         composeTestRule.onNodeWithText("Save").assertIsEnabled()
     }
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun typingNamePredictsCategory() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }

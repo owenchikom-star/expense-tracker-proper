@@ -70,7 +70,7 @@ fun ReceiptCameraScreen(
         contract = ActivityResultContracts.GetContent(),
     ) { uri: android.net.Uri? ->
         uri?.let {
-            val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, it)
+            val bitmap = android.graphics.ImageDecoder.decodeBitmap(android.graphics.ImageDecoder.createSource(context.contentResolver, it))
             val path = saveBitmapToInternal(context, bitmap)
             expenseViewModel.onReceiptImage(bitmap, path) // <-- WIRED
         }

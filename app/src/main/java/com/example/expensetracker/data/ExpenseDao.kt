@@ -3,7 +3,7 @@ package com.example.expensetracker.data
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
-import androidx.room.MapInfo
+import androidx.room.MapColumn
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
@@ -74,8 +74,6 @@ interface ExpenseDao {
     @Upsert
     suspend fun upsert(expense: Expense)
 
-    @Suppress("DEPRECATION")
-    @MapInfo(keyColumn = "category", valueColumn = "total")
     @Query("""
         SELECT category, SUM(price) as total
         FROM expenses
@@ -86,7 +84,7 @@ interface ExpenseDao {
     suspend fun getSpentByCategoryBetween(
         startDate: Long,
         endDate: Long
-    ): Map<String, Double>
+    ): Map<@MapColumn(columnName = "category") String, @MapColumn(columnName = "total") Double>
 
     @Query("""
         SELECT *

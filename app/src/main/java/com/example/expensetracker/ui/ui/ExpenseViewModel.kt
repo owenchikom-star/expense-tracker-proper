@@ -66,7 +66,7 @@ class ExpenseViewModel @Inject constructor(
     val currencyManager: CurrencyManager,
     private val auth: FirebaseAuth,
     private val receiptParser: ReceiptParser,
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
     ) : ViewModel() {
 
     val allExpensesFlow: StateFlow<List<Expense>> = expenseRepository.getAllExpenses()

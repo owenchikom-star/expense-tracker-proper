@@ -29,7 +29,7 @@ fun LoginScreen(
         topBar = { TopAppBar(title = { Text("Expense Tracker") }) }
     ) { padding ->
         Column(Modifier.padding(padding).padding(16.dp)) {
-            TabRow(selectedTabIndex = uiState.selectedTab) {
+            PrimaryTabRow(selectedTabIndex = uiState.selectedTab) {
                 tabs.forEachIndexed { index, title ->
                     Tab(
                         selected = uiState.selectedTab == index,

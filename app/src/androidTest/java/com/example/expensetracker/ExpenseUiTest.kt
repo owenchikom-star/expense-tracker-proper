@@ -5,7 +5,7 @@ import com.example.expensetracker.data.CurrencyManager
 import com.example.expensetracker.data.Expense
 import com.example.expensetracker.ui.ui.ExpenseItem
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Rule
 import org.junit.Test

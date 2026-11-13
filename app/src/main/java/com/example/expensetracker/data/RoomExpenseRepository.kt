@@ -39,7 +39,7 @@ class RoomExpenseRepository @Inject constructor(
     private val expenseDao: ExpenseDao,
     private val auth: FirebaseAuth,
     private val firestore: FirebaseFirestore,
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
     private val storage: FirebaseStorage = FirebaseStorage.getInstance()
 ) : ExpenseRepository {
 
@@ -366,8 +366,7 @@ class RoomExpenseRepository @Inject constructor(
         val col = firestore.collection("users").document(uid).collection("expenses")
         val reg = col.addSnapshotListener { snap, error ->
             if (error != null) {
-                if (error is com.google.firebase.firestore.FirebaseFirestoreException &&
-                    error.code == com.google.firebase.firestore.FirebaseFirestoreException.Code.PERMISSION_DENIED) {
+                if (error.code == com.google.firebase.firestore.FirebaseFirestoreException.Code.PERMISSION_DENIED) {
                     Log.w("SYNC", "Realtime sync permission denied: ${error.message}")
                     syncListenerRegistration?.remove()
                     syncListenerRegistration = null
@@ -637,8 +636,7 @@ class RoomCategoryBudgetRepository @Inject constructor(
         val col = budgetCollection() ?: return@launch
         val reg = col.addSnapshotListener { snap, error ->
             if (error != null) {
-                if (error is com.google.firebase.firestore.FirebaseFirestoreException &&
-                    error.code == com.google.firebase.firestore.FirebaseFirestoreException.Code.PERMISSION_DENIED) {
+                if (error.code == com.google.firebase.firestore.FirebaseFirestoreException.Code.PERMISSION_DENIED) {
                     Log.w("BudgetSync", "Realtime budget sync permission denied: ${error.message}")
                     syncListenerRegistration?.remove()
                     syncListenerRegistration = null

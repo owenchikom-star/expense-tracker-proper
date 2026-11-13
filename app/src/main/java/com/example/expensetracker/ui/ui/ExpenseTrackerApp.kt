@@ -819,7 +819,7 @@ LazyColumn(
  contentPadding = PaddingValues(bottom = 80.dp),
 ) {
  items(expenses, key = { if (it.id.isNotBlank()) "id_${it.id}" else "fb_${it.firebaseId}" }) { expense ->
-     val dismissState = rememberSwipeToDismissBoxState(
+     val dismissState = @Suppress("DEPRECATION") rememberSwipeToDismissBoxState(
          confirmValueChange = { value ->
              value == SwipeToDismissBoxValue.EndToStart
          }

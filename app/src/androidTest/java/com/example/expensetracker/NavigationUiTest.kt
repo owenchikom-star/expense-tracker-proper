@@ -1,7 +1,10 @@
 package com.example.expensetracker
 
+import androidx.activity.ComponentActivity
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
 import com.example.expensetracker.theme.ExpenseTrackerTheme
 import com.example.expensetracker.ui.ui.ExpenseApp
 import org.junit.Rule
@@ -10,18 +13,16 @@ import org.junit.Test
 class NavigationUiTest {
 
     @get:Rule
-    val composeTestRule = createComposeRule()
+    val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun appStartsOnDashboardTab() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }
@@ -30,16 +31,14 @@ class NavigationUiTest {
         composeTestRule.onNodeWithText("Spending").assertIsDisplayed()
     }
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun canSwitchToTransactionsTab() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }
@@ -51,16 +50,14 @@ class NavigationUiTest {
         composeTestRule.onNodeWithText("Search expense…").assertIsDisplayed()
     }
 
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     @Test
     fun clickingFABOpensAddExpenseSheet() {
         composeTestRule.setContent {
+            val windowSizeClass = calculateWindowSizeClass(composeTestRule.activity)
             ExpenseTrackerTheme {
                 ExpenseApp(
-                    windowSizeClass = TODO(),
-                    modifier = TODO(),
-                    onLogout = TODO(),
-                    authViewModel = TODO(),
-                    viewModel = TODO()
+                    windowSizeClass = windowSizeClass
                 )
             }
         }
